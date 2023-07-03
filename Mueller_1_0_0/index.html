@@ -24,8 +24,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet"> 
 
 </head>
+
+<style>
+    input.underline {border:0;border-bottom:1 solid=rgb(246, 165, 13);}
+</style>
 
 
 <body id="top">
@@ -128,9 +133,14 @@
 
                         <div class="s-intro__content-buttons">
                             <a href="#download" class="btn btn--stroke s-intro__content-btn smoothscroll">더알아보기</a>
-                            <a href="https://player.vimeo.com/video/14592941?color=f26522&title=0&byline=0&portrait=0" class="s-intro__content-video-btn">
+                            <a href="https://youtube.com/embed/shorts/cg4sp2aFMj4" class="s-intro__content-video-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M7 6v12l10-6z"></path></svg>
                             </a>
+                        
+                            <!-- <a class="s-intro__content-video-btn" src="https://vimeo.com/841920418?share=copy" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); transform: ;msFilter:;"><path d="M7 6v12l10-6z"></path></svg>
+                            </iframe>
+                 -->
                         </div>
                         
                     </div> <!-- s-intro__content-inner -->
@@ -232,15 +242,36 @@
 
                 <div class="row section-header" data-num="02">
                     <h3 class="column lg-12 section-header__pretitle text-pretitle">Start to diagnose</h3>
-                    <div class="column lg-6 stack-on-1100 section-header__primary">
-                        <h2 class="title text-display-1">
-                            CMOS 패턴 이미지를 업로드 한 후, 잠시만 기다려주세요.
-                        </h2>
-                    </div>
-                    <div class="column lg-6 stack-on-1100 section-header__secondary">
-                        <p class="desc">
-                        After uploading the CMOS pattern image, please wait a moment.
-                        </p>
+                 
+                        <div class="column">
+                            <h2 class="title text-display-1">
+                                CMOS 패턴 이미지를 업로드 한 후, 잠시만 기다려주세요.
+                            </h2>
+                        
+                            <div id="root">
+                                <div class="row align-items-center"></div>
+                         
+                                    <div class="upload-box" style="padding-top: 40px;">
+                                        <div id="drop-file" class="drag-file">
+                                        <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image">
+                                        <input class="file dragOn" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)">
+                                        <p class="message dragOn" class="text-display-1">드래그하여 사진을 업로드 해주세요.</p>
+                                        <div class="image-show" id="image-show"></div>
+                                        
+                                        </div>
+                                        <label class="file-label dragOn text-display-1" for="chooseFile" style="font-family:'Ysabeau SC', sans-serif; font-size:16px">파일 선택</label>
+                                        
+                                        
+                                    </div>
+                    
+                         </div>
+                            <div id="files" class="files">
+                            <div class="file">
+                                <div class="thumbnail"></div> 
+                            </div>
+                            </div>
+                                </div>
+                        </div>
                     </div>
                 </div> <!-- end section-header -->
             </section> <!-- end s-services -->
@@ -587,12 +618,29 @@
 
             <div class="row section-header" data-num="login">
                 <h3 class="column lg-12 section-header__pretitle text-pretitle">Let's go login</h3>
-                <div class="column lg-6 stack-on-1100 section-header__primary">
-                    <h2 class="title text-display-1">
-                    로그인 후 더 많은 서비스를 이용해 보세요
-                   
-                    </h2>
-                </div>    
+                    <div class="container row" style="float: none; margin:100 auto;">
+                        <h2 class="title text-display-1">
+                        로그인 후 더 많은 서비스를 이용해 보세요
+                        </h2>
+                        <div class="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns">
+                            <div class="d-flex justify-content-center">
+                                <div class="column list-block__item">
+                                    <div class="subscribe-form s-footer__subscribe "></div>
+                                            <h6>Login In</h6>
+
+                                            <form id="mc-form" class="mc-form">
+                                                <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center underline" placeholder="ID" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+                                                <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Password" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+                                            </form>
+                                        
+                                            <button type="button" class="btn btn-lg btn-primary" disabled>로그인</button>
+                                            <button type="button" class="btn btn-lg btn-primary" disabled>회원가입</button>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end s-footer__btns -->
+                    </div>    
                 <div class="column lg-6 stack-on-1100 section-header__secondary">
                     
                     <div class="contact-block">
@@ -618,33 +666,6 @@
 
                 </div>
             </div> <!-- end section-header -->
-
-            <div class="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns">
-                <!-- <div class="column list-block__item">
-                    <div class="s-footer__contact-btn">
-                        <a href="mailto:#0" class="btn btn--primary u-fullwidth">
-                            Let's Talk 
-                        </a>
-                    </div>
-                </div> -->
-                <div class="column list-block__item">
-                    <div class="subscribe-form s-footer__subscribe">
-                        <h6>Login In</h6>
-                        <form id="mc-form" class="mc-form">
-                            <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="ID" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-                            <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Password" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-                            
-                        </form>
-                         <div class="column list-block__item">
-                    <div class="s-footer__contact-btn">
-                        <a href="mailto:#0" class="btn btn--primary u-fullwidth">
-                            로그인하기
-                        </a>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </div> <!-- end s-footer__btns -->
 
             <div class="row s-footer__bottom">
 
