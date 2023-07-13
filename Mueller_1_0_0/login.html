@@ -1,53 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-        <div class="wrap">
-            <div class="form-wrap">
-                <div class="button-wrap">
-                    <div id="btn"></div>
-                    <button type="button" class="togglebtn" onclick="login()">LOG IN</button>
-                    <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
-                </div>
-                <div class="social-icons">
-                    🔔facebook
-                    💻twitter
-                    📞google
-                </div>
-                <form id="login" action="" class="input-group">
-                    <input type="text" class="input-field" placeholder="User name or Email" required>
-                    <input type="password" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
-                    <button class="submit">Login</button>
-                </form>
-                <form id="register" action="" class="input-group">
-                    <input type="text" class="input-field" placeholder="User name or Email" required>
-                    <input type="email" class="input-field" placeholder="Your Email" required>
-                    <input type="password" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
-                    <button class="submit">REGISTER</button>
-                </form>
-            </div>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="form-wrap">
+        <div class="button-wrap">
+          <div id="btn"></div>
+          <button type="button" class="togglebtn" onclick="login()">
+            LOG IN
+          </button>
+          <button type="button" class="togglebtn" onclick="register()">
+            REGISTER
+          </button>
         </div>
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("btn");
-            function login(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-            function register(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-        </script>
-    </body>
-</html> 
+        <div class="social-icons">🔔facebook 💻twitter 📞google</div>
+        <form id="login" action="" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="User name or Email"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="checkbox" /><span
+            >Remember Password</span
+          >
+          <button class="submit">Login</button>
+        </form>
+        <form id="register" action="" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="User name or Email"
+            required
+          />
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Your Email"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="checkbox" /><span
+            >Terms and conditions</span
+          >
+          <button class="submit">REGISTER</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      }
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+    </script>
+
+    <div class="input-group">
+      <i class="bx bxs-lock-alt"></i>
+
+      <div id="naverIdLogin"></div>
+      <script type="text/javascript">
+        var naverLogin = new naver.LoginWithNaverId({
+          clientId: "AtEE4lDLuNQnV2U6X_gg",
+          callbackUrl: "http://127.0.0.1:5501",
+          isPopup: false,
+          loginButton: { color: "green", type: 5, height: 48 },
+        });
+        naverLogin.init();
+      </script>
+    </div>
+  </body>
+</html>
