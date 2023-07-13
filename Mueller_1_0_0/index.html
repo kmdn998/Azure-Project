@@ -25,6 +25,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet"> 
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 </head>
 
@@ -646,6 +647,76 @@
                                                         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
                                                         }
                                                 </script>
+
+                                        <div class="input-group">
+                                            <i class="bx bxs-user"></i>
+                                            <a id="kakao-login-btn"></a>
+                                            <div id="result"></div>
+                                            <script type="text/javascript">
+                                            function unlinkApp() {
+                                                Kakao.API.request({
+                                                url: "/v1/user/unlink",
+                                                success: function (res) {
+                                                    alert("success: " + JSON.stringify(res));
+                                                },
+                                                fail: function (err) {
+                                                    alert("fail: " + JSON.stringify(err));
+                                                },
+                                                });
+                                            }
+                                            </script>
+
+                                            <script type="text/javascript">
+                                            Kakao.init("4887e7736a873f2e1e22abb50be6b966");
+                                            console.log(Kakao.isInitialized());
+
+                                            Kakao.Auth.createLoginButton({
+                                                container: "#kakao-login-btn",
+                                                success: function (authObj) {
+                                                Kakao.API.request({
+                                                    url: "/v2/user/me",
+                                                    success: function (result) {
+                                                    $("#result").append(result);
+                                                    id = result.id;
+                                                    connected_at = result.connected_at;
+                                                    kakao_account = result.kakao_account;
+                                                    $("#result").append(kakao_account);
+
+                                                    email = "";
+                                                    gender = "";
+                                                    if (typeof kakao_account != "undefined") {
+                                                        email = kakao_account.email;
+                                                        gender = kakao_account.gender;
+                                                    }
+                                                    if (gender == "female") {
+                                                        gender = "여성";
+                                                    } else {
+                                                        gender = "남성";
+                                                    }
+
+                                                    resultdiv =
+                                                        '<button type="button" data-toggle="modal" data-target="#result" >';
+                                                    resultdiv += "<h4>이메일: " + email + "<h2>";
+                                                    resultdiv += "<h4>성별: " + gender + "<h2>";
+                                                    resultdiv +=
+                                                        "<h4>해당정보가 맞으면 회원가입을 눌러주세요.";
+
+                                                    $("#result").append(resultdiv);
+                                                    },
+                                                    fail: function (error) {
+                                                    alert(
+                                                        "login success, but failed to request user information: " +
+                                                        JSON.stringify(error)
+                                                    );
+                                                    },
+                                                });
+                                                },
+                                                fail: function (err) {
+                                                alert("failed to login: " + JSON.stringify(err));
+                                                },
+                                            });
+                                            </script>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
