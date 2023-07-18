@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="KO" class="no-js" >
+<html lang="ko" class="no-js" >
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DDS</title>
 
     <script>
@@ -26,23 +26,18 @@
     <link rel="manifest" href="site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet"> 
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script
+        type="text/javascript"
+        src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+        charset="utf-8"
+        ></script>
+        <style>
+            input.underline {border:0;border-bottom:1 solid=rgb(246, 165, 13);}
+        </style>
 
 
 </head>
-<script
-type="text/javascript"
-src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
-charset="utf-8"
-></script>
-<script
-type="text/javascript"
-src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
-charset="utf-8"
 
-></script>
-<style>
-    input.underline {border:0;border-bottom:1 solid=rgb(246, 165, 13);}
-</style>
 
 
 <body id="top">
@@ -635,7 +630,7 @@ charset="utf-8"
                         로그인 후 더 많은 서비스를 이용해 보세요
 
                                         <div class="input-group">
-                                            <i class="bx bxs-user"></i>
+                                            <i class="bx bxs-user">
                                             <a id="kakao-login-btn"></a>
                                             <div id="result"></div>
                                             <script type="text/javascript">
@@ -702,20 +697,24 @@ charset="utf-8"
                                                 alert("failed to login: " + JSON.stringify(err));
                                                 },
                                             });
-                                             </script>
+                                            </script>
                                              <div class="input-group">
                                                  <i class="bx bxs-lock-alt"></i>
-                                                 <div id="naverIdLogin"></div>
-                                                 <script type="text/javascript">
-                                                 var naverLogin = new naver.LoginWithNaverId({
-                                                    clientId: "AtEE4lDLuNQnV2U6X_gg",
-                                                    callbackUrl: "http://127.0.0.1:5502",
-                                                    isPopup: false,
-                                                    loginButton: { color: "green", type: 5, height: 48},
-                                                 });
-                                                 naverLogin.init();
-                                             </script>
+                                                 <div id="naverIdLogin">
+                                                 </div>
+                                                    <script type="text/javascript" class="container">
+                                                        realdiv='<div class="container">';
+                                                        var naverLogin = new naver.LoginWithNaverId({
+                                                            clientId: "AtEE4lDLuNQnV2U6X_gg",
+                                                            callbackUrl: "http://127.0.0.1:5502",
+                                                            isPopup: false,
+                                                            loginButton: { color: "green", type: 3, height: "1" },
+                                                        });
+                                                    naverLogin.init();
+                                                    </script>
+                                                
                                             </script>
+                                        </i>
                                         </div>
                                     </div>
                                 </div>
