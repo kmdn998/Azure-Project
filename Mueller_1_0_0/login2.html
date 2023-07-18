@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js" >
+<head>
+    <link rel="stylesheet" href="css/login2.css">
+    <script src="login2.js"></script>
+    <script
+        type="text/javascript"
+        src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+        charset="utf-8"
+        ></script>
+        <style>
+            input.underline {border:0;border-bottom:1 solid=rgb(246, 165, 13);}
+        </style>
+        <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+    <body id="particles-js"></body>
+    <div class="animated bounceInDown">
+    <div class="container">
+        <span class="error animated tada" id="msg"></span>
+        <form name="form1" class="box" onsubmit="return checkStuff()">
+        <h4>DDS<span></span></h4>
+        <h5>로그인</h5>
+            <div class="input-group">
+                <i class="bx bxs-lock-alt"></i>
+        
+                <div id="naverIdLogin"></div>
+                <script type="text/javascript">
+                var naverLogin = new naver.LoginWithNaverId({
+                    clientId: "AtEE4lDLuNQnV2U6X_gg",
+                    callbackUrl: "http://127.0.0.1:5502",
+                    isPopup: true,
+                    loginButton: { color: "green", type: 5, height: 48 },
+                });
+                naverLogin.init();
+                </script>
+            </div>
+            <i class="typcn typcn-eye" id="eye"></i>
+            
+            <div class="input-group">
+                <i class="bx bxs-user">
+                <a id="kakao-login-btn"></a>
+                <div id="result"></div>
+                <script type="text/javascript">
+                function unlinkApp() {
+                    Kakao.API.request({
+                    url: "/v1/user/unlink",
+                    success: function (res) {
+                        alert("success: " + JSON.stringify(res));
+                    },
+                    fail: function (err) {
+                        alert("fail: " + JSON.stringify(err));
+                    },
+                    });
+                }
+                </script>
+        
+                <script type="text/javascript">
+                Kakao.init("8cd9a7b988003d6821148374f32e3cda");
+                console.log(Kakao.isInitialized());
+        
+                Kakao.Auth.createLoginButton({
+                    container: "#kakao-login-btn",
+                    success: function (authObj) {
+                    Kakao.API.request({
+                        url: "/v2/user/me",
+                        success: function (result) {
+                        $("#result").append(result);
+                        id = result.id;
+                        connected_at = result.connected_at;
+                        kakao_account = result.kakao_account;
+                        $("#result").append(kakao_account);
+        
+                        email = "";
+                        gender = "";
+                        if (typeof kakao_account != "undefined") {
+                            email = kakao_account.email;
+                            gender = kakao_account.gender;
+                        }
+                        if (gender == "female") {
+                            gender = "여성";
+                        } else {
+                            gender = "남성";
+                        }
+        
+                        resultdiv =
+                            '<button type="button" data-toggle="modal" data-target="#result" >';
+                        resultdiv += "<h4>이메일: " + email + "<h2>";
+                        resultdiv += "<h4>성별: " + gender + "<h2>";
+                        resultdiv +=
+                            "<h4>해당정보가 맞으면 회원가입을 눌러주세요.";
+                                
+        
+                        $("#result").append(resultdiv);
+                        },
+                        fail: function (error) {
+                        alert(
+                            "login success, but failed to request user information: " +
+                            JSON.stringify(error)
+                        );
+                        },
+                    });
+                    },
+                    fail: function (err) {
+                    alert("failed to login: " + JSON.stringify(err));
+                    },
+                });
+                </script>
+            
+            <input type="submit" value="로그인 후 서비스 이용이 가능합니다." class="btn1">
+        </form>
+           
+    </div> 
+        <div class="footer">
+        <span>Made with <i class="fa fa-heart pulse"></i> <a href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a href="https://codepen.io/lordgamer2354">By Anees Khan</a></span>
+        </div>
+    </div>
+</html>

@@ -4918,3 +4918,12 @@ img.u-pull-left {
   .upload-box .drag-file .message {
     margin-bottom: 0;
   }
+
+  .login2Button {
+    font-size: 30px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius : 70%;
+  
+  }
