@@ -8,6 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
+
 body, html {
   font-family: 'Source Sans Pro', sans-serif;
   background-size: cover;
@@ -30,10 +31,10 @@ body, html {
   position: absolute;
   text-align: center;
   transform: translateX(-50%);
-  background-color: #4a61ae;
+  background: linear-gradient(45deg,#e5e9f0,#5bb9f0);
   border-radius: 9px;
-  border-top: 10px solid #79a6fe;
-  border-bottom: 10px solid #4a61ae;
+  border-top: 10px solid #5bb9f0;
+  border-bottom: 10px solid #e5e9f0;
   width: 400px;
   height: 500px;
   box-shadow: 1px 1px 108.8px 19.2px rgb(25,31,53);
@@ -41,23 +42,32 @@ body, html {
 
 .box h4 {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #4a5177; 
+  color:#0a0a0a; 
   font-size: 18px;
   margin-top:94px;;
 }
 
-.box h4 span {
-  color: #dfdeee;
-  font-weight: lighter;
+.box h1 span {
+  color: #ffffff;
+  font: weight 1px;
+  font-family: 'Bagel Fat One', cursive;
+  font-family: 'Domine', serif;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-shadow: 6px 2px 2px gray;
 }
 
-.box h5 {
+.box h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 13px;
-  color: #a1a4ad;
+  font-size: 20px;
+  color: #000000;
   letter-spacing: 1.5px;
   margin-top: -15px;
   margin-bottom: 70px;
+  font-family: 'Bagel Fat One', cursive;
+  font-family: 'Domine', serif;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .box input[type = "text"],.box input[type = "password"] {
@@ -115,8 +125,8 @@ label span {
 
 .btn1 {
   border:0;
-  background: #da921f;
-  color: #dfdeee;
+  background: #52b8e7;
+  color: white;
   border-radius: 100px;
   width: 340px;
   height: 49px;
@@ -126,10 +136,14 @@ label span {
   left: 8%;
   transition: 0.3s;
   cursor: pointer;
+  font-family: 'Bagel Fat One', cursive;
+  font-family: 'Domine', serif;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .btn1:hover {
-  background: #5d33e6;
+  background: #1b7ca3;
 }
 
 .rmb {
