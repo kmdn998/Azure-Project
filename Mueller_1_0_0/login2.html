@@ -61,7 +61,7 @@
                 }
                 </script>
         
-                <script type="text/javascript">
+                <!-- <script type="text/javascript">
                 Kakao.init("8cd9a7b988003d6821148374f32e3cda");
                 console.log(Kakao.isInitialized());
         
@@ -69,7 +69,7 @@
                     container: "#kakao-login-btn",
                     success: function (authObj) {
                     Kakao.API.request({
-                        url: "/v2/user/me",
+                        url: "http://localhost:5502/oauth/kakao",
                         success: function (result) {
                         $("#result").append(result);
                         id = result.id;
@@ -111,7 +111,26 @@
                     alert("failed to login: " + JSON.stringify(err));
                     },
                 });
+                </script> -->
+
+                <button id="kakao-login-btn">Login with Kakao</button>
+
+                <script type="text/javascript">
+                    document.getElementById('kakao-login-btn').onclick = function() {
+                        // 여기서 CLIENT_ID는 카카오 개발자 콘솔에서 얻은 애플리케이션의 클라이언트 ID입니다.
+                        // REDIRECT_URI는 카카오 개발자 콘솔에서 등록한 redirect URI와 동일해야 합니다.
+                        var CLIENT_ID = '278707778b749aaa8cd7ff5422152e9c';
+                        var REDIRECT_URI = 'http://localhost:5500/oauth/kakao';
+
+                        var url = 'https://kauth.kakao.com/oauth/authorize';
+                        url += '?client_id=' + CLIENT_ID;
+                        url += '&redirect_uri=' + REDIRECT_URI;
+                        url += '&response_type=code';
+
+                        window.location.href = url;
+                    }
                 </script>
+
             
             <input type="submit" value="로그인 후 서비스 이용이 가능합니다." class="btn1">
         </form>
