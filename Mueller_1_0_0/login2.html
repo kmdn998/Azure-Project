@@ -69,7 +69,7 @@
                     container: "#kakao-login-btn",
                     success: function (authObj) {
                     Kakao.API.request({
-                        url: "http://localhost:5502/oauth/kakao",
+                        url: "http://localhost:5502/",
                         success: function (result) {
                         $("#result").append(result);
                         id = result.id;
