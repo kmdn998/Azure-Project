@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify
 import jwt
 import requests
 import logging
+from flask_cors import CORS
 
+CORS(app)
 
 app = Flask(__name__)
 
@@ -12,7 +14,7 @@ logging.basicConfig(filename="/Users/ny/Desktop/pythonn/app.log", level=logging.
 
 @app.route("/login", methods=["POST"])
 def login():
-    kakao_token = request.json.get("access_token")
+    kakao_token = request.post("access_token")
     app.logger.info("Received token: %s", kakao_token)
 
     headers = {
@@ -34,4 +36,4 @@ def login():
 
 
 if __name__ == "__main__":
-    app.run(port=3000)
+    app.run(port=8000)

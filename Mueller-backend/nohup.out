@@ -12,3 +12,5 @@ Address already in use
 Port 3000 is in use by another program. Either identify and stop that program, or start the server with a different port.
  * Serving Flask app 'login2'
  * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
