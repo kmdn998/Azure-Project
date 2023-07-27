@@ -2,7 +2,6 @@
 <html lang="ko" class="no-js" >
 <head>
     <link rel="stylesheet" href="css/login2.css">
-    <script src="login2.js"></script>
     <script
         type="text/javascript"
         src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
@@ -17,8 +16,9 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Domine&family=Dongle:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
         </style>
-
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
         <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+        <script src="login2.js"></script>
 </head>
     <body id="particles-js"></body>
     <div class="animated bounceInDown">
@@ -43,7 +43,7 @@
             </div>
             <i class="typcn typcn-eye" id="eye"></i>
             
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <i class="bx bxs-user">
                 <a id="kakao-login-btn"></a>
                 <div id="result"></div>
@@ -59,7 +59,7 @@
                     },
                     });
                 }
-                </script>
+                </script> -->
         
                 <!-- <script type="text/javascript">
                 Kakao.init("8cd9a7b988003d6821148374f32e3cda");
@@ -115,17 +115,8 @@
 
                 <button id="kakao-login-btn">카카오로 로그인</button>
 
-                
-
-
 
             
             <input type="submit" value="로그인 후 서비스 이용이 가능합니다." class="btn1">
         </form>
-           
-    </div> 
-        <div class="footer">
-        <span>Made with <i class="fa fa-heart pulse"></i> <a href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a href="https://codepen.io/lordgamer2354">By Anees Khan</a></span>
-        </div>
-    </div>
 </html>
