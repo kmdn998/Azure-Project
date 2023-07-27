@@ -18,8 +18,11 @@ def login():
     headers = {
         "Authorization": f"Bearer {kakao_token}",
     }
-    response = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers)
+    response = requests.post("https://kapi.kakao.com/v2/user/me", headers=headers)
     kakao_user = response.json()
+
+    # 사용자 정보를 로그로 출력
+    app.logger.info("User Info: %s", kakao_user)
 
     token = jwt.encode(
         {"email": kakao_user["email"], "gender": kakao_user["gender"]},
@@ -31,4 +34,4 @@ def login():
 
 
 if __name__ == "__main__":
-    app.run(port=5502)
+    app.run(port=3000)
