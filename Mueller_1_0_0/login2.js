@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // 로그인 성공 시, 백엔드에 토큰을 전송합니다.
           console.log("Login successful");
           console.log(authObj);
-          fetch("http://localhost:8000/login", {
+          fetch("http://localhost:7700/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -29,8 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
               return response.json();
             })
             .then((data) => {
-              // 백엔드에서 받은 JWT를 로컬 저장소에 저장합니다.
-              localStorage.setItem("jwt", data.token);
+              console.log(data);
+              if (data.message === "existing_user") {
+                alert("이미 계정이 있습니다. 로그인되었습니다.");
+              } else if (data.message === "new_user") {
+                alert("새로운 계정으로 저장되었습니다.");
+              } else {
+                alert("알 수 없는 오류가 발생했습니다.");
+              }
+
+              // 로그인 성공 시 index.html로 이동
+              window.location.href = "index.html";
             })
             .catch((error) => {
               console.error("Error:", error);

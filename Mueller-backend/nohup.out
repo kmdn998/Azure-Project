@@ -132,3 +132,1188 @@ Traceback (most recent call last):
   File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 2, in <module>
     from flask_sqlalchemy import SQLAlchemy
 ModuleNotFoundError: No module named 'flask_sqlalchemy'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 2, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 64, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 858, in _call_for_binds
+    engine = self.engines[key]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 639, in engines
+    app = current_app._get_current_object()  # type: ignore[attr-defined]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/werkzeug/local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 64, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 858, in _call_for_binds
+    engine = self.engines[key]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 639, in engines
+    app = current_app._get_current_object()  # type: ignore[attr-defined]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/werkzeug/local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 65, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 868, in _call_for_binds
+    getattr(metadata, op_name)(bind=engine)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4916, in create_all
+    bind._run_ddl_visitor(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3146, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3062, in begin
+    conn = self.connect(close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 65, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 868, in _call_for_binds
+    getattr(metadata, op_name)(bind=engine)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4916, in create_all
+    bind._run_ddl_visitor(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3146, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3062, in begin
+    conn = self.connect(close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 65, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 868, in _call_for_binds
+    getattr(metadata, op_name)(bind=engine)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4916, in create_all
+    bind._run_ddl_visitor(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3146, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3062, in begin
+    conn = self.connect(close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server on socket "@!@localhost/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 64, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 858, in _call_for_binds
+    engine = self.engines[key]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 639, in engines
+    app = current_app._get_current_object()  # type: ignore[attr-defined]
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/werkzeug/local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 644, in connect
+    sock = socket.create_connection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/socket.py", line 823, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 711, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '@!@localhost' ([Errno 8] nodename nor servname provided, or not known)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 65, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 868, in _call_for_binds
+    getattr(metadata, op_name)(bind=engine)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4916, in create_all
+    bind._run_ddl_visitor(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3146, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3062, in begin
+    conn = self.connect(close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 711, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '@!@localhost' ([Errno 8] nodename nor servname provided, or not known)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 644, in connect
+    sock = socket.create_connection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/socket.py", line 823, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 711, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '@!@localhost' ([Errno 8] nodename nor servname provided, or not known)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 65, in <module>
+    db.create_all()  # 데이터베이스 테이블 생성
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 887, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/extension.py", line 868, in _call_for_binds
+    getattr(metadata, op_name)(bind=engine)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4916, in create_all
+    bind._run_ddl_visitor(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3146, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3062, in begin
+    conn = self.connect(close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 358, in __init__
+    self.connect()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 711, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '@!@localhost' ([Errno 8] nodename nor servname provided, or not known)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+ * Serving Flask app 'login2'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+Press CTRL+C to quit
+127.0.0.1 - - [30/Jul/2023 04:27:33] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:27:34,104] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 50, in login
+    token = jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:27:34] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:30:38] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:30:38,497] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 50, in login
+    token = jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:30:38] "POST /login HTTP/1.1" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+Press CTRL+C to quit
+127.0.0.1 - - [30/Jul/2023 04:34:19] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:34:19,410] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+    token = jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:34:19] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:35:59] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:35:59,557] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:35:59] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:39:05] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:39:05,965] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:39:05] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:41:03] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:41:03,638] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:41:03] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:43:22] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:43:22,393] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+    token = jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:43:22] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 04:47:22] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:47:22,154] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 48, in login
+    token = jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+127.0.0.1 - - [30/Jul/2023 04:47:22] "POST /login HTTP/1.1" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:7700
+Press CTRL+C to quit
+127.0.0.1 - - [30/Jul/2023 04:51:25] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 04:51:26] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 04:57:01] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 04:57:02,005] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 58, in login
+    message = "새로운 계정으로 저장되었습니다."
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 31, in create_user
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3383, in flush
+    self._flush(objects)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3523, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3483, in _flush
+    flush_context.execute()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+[SQL: INSERT INTO user (email, gender) VALUES (%(email)s, %(gender)s)]
+[parameters: {'email': 'kny200208@kakao.com', 'gender': 'female'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+127.0.0.1 - - [30/Jul/2023 04:57:02] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 05:04:45] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 05:04:45,695] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 58, in login
+    message = "new_user"
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 31, in create_user
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3383, in flush
+    self._flush(objects)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3523, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3483, in _flush
+    flush_context.execute()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+[SQL: INSERT INTO user (email, gender) VALUES (%(email)s, %(gender)s)]
+[parameters: {'email': 'kny200208@kakao.com', 'gender': 'female'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+127.0.0.1 - - [30/Jul/2023 05:04:45] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 05:08:24] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 05:08:24,781] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 58, in login
+    message = "existing_user"
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 31, in create_user
+    if user:
+  File "<string>", line 2, in commit
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3383, in flush
+    self._flush(objects)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3523, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3483, in _flush
+    flush_context.execute()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+[SQL: INSERT INTO user (email, gender) VALUES (%(email)s, %(gender)s)]
+[parameters: {'email': 'kny200208@kakao.com', 'gender': 'female'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+127.0.0.1 - - [30/Jul/2023 05:08:24] "POST /login HTTP/1.1" 500 -
+127.0.0.1 - - [30/Jul/2023 05:14:12] "OPTIONS /login HTTP/1.1" 200 -
+[2023-07-30 05:14:12,181] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 58, in login
+    "Kknnyy0819@@!",
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 31, in create_user
+    return "existing_user"
+  File "<string>", line 2, in commit
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3383, in flush
+    self._flush(objects)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3523, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3483, in _flush
+    flush_context.execute()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 822, in _read_query_result
+    result.read()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'kny200208@kakao.com' for key 'user.email'")
+[SQL: INSERT INTO user (email, gender) VALUES (%(email)s, %(gender)s)]
+[parameters: {'email': 'kny200208@kakao.com', 'gender': 'female'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+127.0.0.1 - - [30/Jul/2023 05:14:12] "POST /login HTTP/1.1" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 7700 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 7700 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:7700
+Press CTRL+C to quit
+127.0.0.1 - - [30/Jul/2023 05:15:57] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:15:57] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:16:53] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:16:53] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:18:27] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:18:27] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:22:11] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 05:22:11] "POST /login HTTP/1.1" 200 -

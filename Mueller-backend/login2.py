@@ -1,17 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from urllib.parse import quote_plus
 import jwt
 import requests
-import logging
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
 # 데이터베이스 설정
+password = "Kknnyy0819@@!"
+url_encoded_password = quote_plus(password)
 app.config[
     "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://root:Kknnyy0819@@!@localhost/Azure_db"
+] = f"mysql+pymysql://root:{url_encoded_password}@localhost/Azure_db"
 db = SQLAlchemy(app)
 
 
@@ -24,9 +26,14 @@ class User(db.Model):
 
 # 사용자 정보를 데이터베이스에 저장
 def create_user(email, gender):
-    user = User(email=email, gender=gender)
-    db.session.add(user)
+    user = User.query.filter_by(email=email).first()
+    if user:
+        return "existing_user"
+
+    new_user = User(email=email, gender=gender)
+    db.session.add(new_user)
     db.session.commit()
+    return "new_user"
 
 
 @app.route("/login", methods=["POST"])
@@ -35,31 +42,27 @@ def login():
     if kakao_token is None:
         return jsonify({"error": "No access token"}), 400
 
-    headers = {
-        "Authorization": f"Bearer {kakao_token}",
-    }
+    headers = {"Authorization": f"Bearer {kakao_token}"}
     response = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers)
     if response.status_code != 200:
         return jsonify({"error": "Invalid access token"}), 400
     kakao_user = response.json()
 
+    email = kakao_user["kakao_account"]["email"]
+    gender = kakao_user["kakao_account"]["gender"]
+
+    message = create_user(email, gender)
+
     token = jwt.encode(
-        {
-            "email": kakao_user["kakao_account"]["email"],
-            "gender": kakao_user["kakao_account"]["gender"],
-        },
+        {"email": email, "gender": gender},
         "Kknnyy0819@@!",
         algorithm="HS256",
     )
 
-    # 사용자 정보를 데이터베이스에 저장
-    create_user(
-        kakao_user["kakao_account"]["email"], kakao_user["kakao_account"]["gender"]
-    )
-
-    return jsonify({"token": token})
+    return jsonify({"message": message, "token": token})
 
 
 if __name__ == "__main__":
-    db.create_all()  # 데이터베이스 테이블 생성
-    app.run(port=8000)
+    with app.app_context():
+        db.create_all()
+    app.run(port=7700)
