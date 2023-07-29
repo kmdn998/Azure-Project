@@ -14,3 +14,67 @@ Port 3000 is in use by another program. Either identify and stop that program, o
  * Debug mode: off
  * Serving Flask app 'login2'
  * Debug mode: off
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 5, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 5, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 6, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 6, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 6, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 6, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 6, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 7, in <module>
+    CORS(app)
+NameError: name 'app' is not defined
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 7, in <module>
+    CORS(app)
+NameError: name 'app' is not defined
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 7, in <module>
+    CORS(app)
+NameError: name 'app' is not defined
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off
+ * Serving Flask app 'login2'
+ * Debug mode: off

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Kakao.Auth.login({
         success: function (authObj) {
           // 로그인 성공 시, 백엔드에 토큰을 전송합니다.
+          console.log(authObj);
           fetch("http://localhost:8000/login", {
             method: "POST",
             headers: {

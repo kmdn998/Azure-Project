@@ -4,9 +4,8 @@ import requests
 import logging
 from flask_cors import CORS
 
-CORS(app)
-
 app = Flask(__name__)
+CORS(app)
 
 # Configure logging
 logging.basicConfig(filename="/Users/ny/Desktop/pythonn/app.log", level=logging.DEBUG)
@@ -14,25 +13,33 @@ logging.basicConfig(filename="/Users/ny/Desktop/pythonn/app.log", level=logging.
 
 @app.route("/login", methods=["POST"])
 def login():
-    kakao_token = request.post("access_token")
-    app.logger.info("Received token: %s", kakao_token)
+    kakao_token = request.json.get("access_token")
+    if kakao_token is None:
+        return jsonify({"error": "No access token"}), 400
+
+    print("Received token: ", kakao_token)  # Add this line to print the received token
 
     headers = {
         "Authorization": f"Bearer {kakao_token}",
     }
-    response = requests.post("https://kapi.kakao.com/v2/user/me", headers=headers)
+    response = requests.get("https://kapi.kakao.com/v2/user/me", headers=headers)
+    if response.status_code != 200:
+        return jsonify({"error": "Invalid access token"}), 400
     kakao_user = response.json()
 
     # 사용자 정보를 로그로 출력
-    app.logger.info("User Info: %s", kakao_user)
+    print("User Info: ", kakao_user)  # Add this line to print the user info
 
     token = jwt.encode(
-        {"email": kakao_user["email"], "gender": kakao_user["gender"]},
+        {
+            "email": kakao_user["kakao_account"]["email"],
+            "gender": kakao_user["kakao_account"]["gender"],
+        },
         "Kknnyy0819@@!",
         algorithm="HS256",
     )
 
-    return jsonify({"token": token})
+    return jsonify({"token": token.decode("utf-8")})
 
 
 if __name__ == "__main__":
