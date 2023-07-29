@@ -78,3 +78,57 @@ NameError: name 'app' is not defined
  * Debug mode: off
  * Serving Flask app 'login2'
  * Debug mode: off
+Received token:  i9rsGDF3hq6HsdupuNkUiYH3PHf8BuFYfY_VITMYCinI2gAAAYmi2WXQ
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  FaCXRQYouiC_ZIGryJZZ1LXTlyDVo26O64F5jSVACinI2gAAAYmi2Yjy
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  a0YSso7Cnm4hoKKM0zBso4Leheh-VMu1PgaGn39zCinI2gAAAYmi2Y75
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  Fu7jUKb38TDl7VG8nJcJ85XfkEofCpQZtijMrrJJCinI2gAAAYmi2ZXQ
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  J0ehUlrp5YV9IqGExkRDS44v9p9tlRqWovQjOluuCinI2gAAAYmi2ZmY
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  d5WYTGpDw8f21GhrM5Z72DCY9BzohAFdRxtVKpQpCinI2gAAAYmi2Zz5
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  reogEgkeriEhyU6yHpKZkk3a0JnN29oE62niItV0CinI2gAAAYmi2aCe
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  FQ30mjtgUivfRGVAIXUk3uRX1J0RoeaWx1Z4FwdqCinI2gAAAYmi2aPL
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  AIgb5iJPM89DmVWqSBRawO-j7CpkD-LMwgpn2PQ0CinI2gAAAYmi2abQ
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  5d2n2BxXco6ftcmFKMQCaa1puCmvJsPz7t_msRFJCinI2gAAAYmi2ap0
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  _t28p3Q8d8A9LF1uBUl2BavGpKSgD0S3eYLJBqgVCinI2gAAAYmi2bPG
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  Nha6oB_Sr8BVOMWbx5bL0OAw_GguwzIqrgsxmxLdCinI2gAAAYmi2bhx
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  ODkcga9_IQ3HtB1BSHxZxf0GbzxcHc-rLNhbAOEACinI2gAAAYmi2bvP
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  3zS1V3lrTjKxCABjYShHV-tkAURQlK33vvf9dU4zCinI2gAAAYmi2b9W
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  M7RUgsbBY2f2GDgv0Dt6WZxSLNWaDDk_ArmqscQrCj10EQAAAYmi2j0_
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  UUQNCb725g_Th-OlUKDSkInboIt1z_h9CBCD_SF9Cj10EQAAAYmi2omk
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 8000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Received token:  YMrxGO9NF4t-_RoDsakOtsWw_S_tbWsgzxX05pNfCj11mwAAAYmi4cky
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Received token:  4oPkXk42ysuU1IzfZwVhTYdMTjTpyUy4feB94RbDCj11mwAAAYmi4dJ3
+User Info:  {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 2, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 2, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
+Traceback (most recent call last):
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 2, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'

@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
 import jwt
 import requests
 import logging
@@ -7,8 +8,25 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Configure logging
-logging.basicConfig(filename="/Users/ny/Desktop/pythonn/app.log", level=logging.DEBUG)
+# 데이터베이스 설정
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql://root:Kknnyy0819@@!@localhost/Azure_db"
+db = SQLAlchemy(app)
+
+
+# User 모델 정의
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    gender = db.Column(db.String(10), nullable=False)
+
+
+# 사용자 정보를 데이터베이스에 저장
+def create_user(email, gender):
+    user = User(email=email, gender=gender)
+    db.session.add(user)
+    db.session.commit()
 
 
 @app.route("/login", methods=["POST"])
@@ -17,8 +35,6 @@ def login():
     if kakao_token is None:
         return jsonify({"error": "No access token"}), 400
 
-    print("Received token: ", kakao_token)  # Add this line to print the received token
-
     headers = {
         "Authorization": f"Bearer {kakao_token}",
     }
@@ -26,9 +42,6 @@ def login():
     if response.status_code != 200:
         return jsonify({"error": "Invalid access token"}), 400
     kakao_user = response.json()
-
-    # 사용자 정보를 로그로 출력
-    print("User Info: ", kakao_user)  # Add this line to print the user info
 
     token = jwt.encode(
         {
@@ -39,8 +52,14 @@ def login():
         algorithm="HS256",
     )
 
-    return jsonify({"token": token.decode("utf-8")})
+    # 사용자 정보를 데이터베이스에 저장
+    create_user(
+        kakao_user["kakao_account"]["email"], kakao_user["kakao_account"]["gender"]
+    )
+
+    return jsonify({"token": token})
 
 
 if __name__ == "__main__":
+    db.create_all()  # 데이터베이스 테이블 생성
     app.run(port=8000)
