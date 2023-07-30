@@ -1317,3 +1317,30 @@ Press CTRL+C to quit
 127.0.0.1 - - [30/Jul/2023 05:18:27] "POST /login HTTP/1.1" 200 -
 127.0.0.1 - - [30/Jul/2023 05:22:11] "OPTIONS /login HTTP/1.1" 200 -
 127.0.0.1 - - [30/Jul/2023 05:22:11] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:7700
+Press CTRL+C to quit
+127.0.0.1 - - [30/Jul/2023 14:19:48] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:19:48] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:20:20] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:20:20] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:24:55] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:24:55] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:27:03] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:27:03] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:27:06] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:29:27] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:29:27] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:30:11] "OPTIONS /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jul/2023 14:30:11] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Jul/2023 14:33:22] "OPTIONS /login HTTP/1.1" 200 -
+Received token: f8nG01X5uD1Ro4f6Rbb91s8Dmy_ONthNoLfcrPjBCinJYAAAAYmlSXdu
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+INFO:werkzeug:127.0.0.1 - - [30/Jul/2023 14:33:22] "POST /login HTTP/1.1" 200 -

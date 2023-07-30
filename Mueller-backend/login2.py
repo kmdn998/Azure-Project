@@ -4,9 +4,12 @@ from urllib.parse import quote_plus
 import jwt
 import requests
 from flask_cors import CORS
+import logging
+
 
 app = Flask(__name__)
 CORS(app)
+
 
 # 데이터베이스 설정
 password = "Kknnyy0819@@!"
@@ -48,6 +51,10 @@ def login():
         return jsonify({"error": "Invalid access token"}), 400
     kakao_user = response.json()
 
+    # kakao_user 정보를 출력합니다.
+    print(f"Received token: {kakao_token}")
+    print(f"User Info: {kakao_user}")
+
     email = kakao_user["kakao_account"]["email"]
     gender = kakao_user["kakao_account"]["gender"]
 
@@ -61,6 +68,8 @@ def login():
 
     return jsonify({"message": message, "token": token})
 
+
+logging.basicConfig(level=logging.INFO)
 
 if __name__ == "__main__":
     with app.app_context():
