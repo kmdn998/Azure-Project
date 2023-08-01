@@ -21,19 +21,20 @@ db = SQLAlchemy(app)
 
 
 # User 모델 정의
-class User(db.Model):
+class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     gender = db.Column(db.String(10), nullable=False)
+    name = db.Column(db.String(20), nullable=False)
 
 
 # 사용자 정보를 데이터베이스에 저장
-def create_user(email, gender):
-    user = User.query.filter_by(email=email).first()
+def create_user(email, gender, nickname):
+    user = Users.query.filter_by(email=email).first()
     if user:
         return "existing_user"
 
-    new_user = User(email=email, gender=gender)
+    new_user = Users(email=email, gender=gender, name=nickname)
     db.session.add(new_user)
     db.session.commit()
     return "new_user"
@@ -57,11 +58,15 @@ def login():
 
     email = kakao_user["kakao_account"]["email"]
     gender = kakao_user["kakao_account"]["gender"]
+    try:
+        name = kakao_user["kakao_account"]["profile"]["nickname"]
+    except KeyError:
+        name = "default_name"  # Set default name if nickname does not exist
 
-    message = create_user(email, gender)
+    message = create_user(email, gender, name)
 
     token = jwt.encode(
-        {"email": email, "gender": gender},
+        {"email": email, "gender": gender, "name": name},
         "Kknnyy0819@@!",
         algorithm="HS256",
     )

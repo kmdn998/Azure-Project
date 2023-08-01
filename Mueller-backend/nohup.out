@@ -1344,3 +1344,221 @@ INFO:werkzeug:127.0.0.1 - - [30/Jul/2023 14:33:22] "OPTIONS /login HTTP/1.1" 200
 Received token: f8nG01X5uD1Ro4f6Rbb91s8Dmy_ONthNoLfcrPjBCinJYAAAAYmlSXdu
 User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'kakao_account': {'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
 INFO:werkzeug:127.0.0.1 - - [30/Jul/2023 14:33:22] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 22:47:55] "OPTIONS /login HTTP/1.1" 200 -
+Received token: -seQejsrsdjrzpeHNxR9Z5DVCbo6vyGWeu8eG0opCj10aAAAAYmxWvWi
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 22:47:55] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:04:17] "OPTIONS /login HTTP/1.1" 200 -
+Received token: t1COppQYmENVxPGuDrkAfIBaQM1Cf2Ibi-GoFRYuCiolEQAAAYmxae7l
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:04:17] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:05:53] "OPTIONS /login HTTP/1.1" 200 -
+Received token: _J2t8oI-twxZd-6yQC0FpeDKpEef2aRQYtSNzf2WCiolDgAAAYmxa2dc
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:05:53] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:09:17] "OPTIONS /login HTTP/1.1" 200 -
+Received token: WAY1n1VgFiTS_UK6YrqEu0AQkFIa1WFzy7khnlH7CiolDwAAAYmxboQB
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:09:17] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:09:41] "OPTIONS /login HTTP/1.1" 200 -
+Received token: ziQh5f4WMaxMJ3F2X9ipAADGTpNXcRZpoRQ1DBijCiolDwAAAYmxbuDu
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:09:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:10:36] "OPTIONS /login HTTP/1.1" 200 -
+Received token: S8P-o693sknIo94sX7k9pmImUnf3siXke7ezj-P4Cj1ylwAAAYmxb7j_
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:10:36] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:12:35] "OPTIONS /login HTTP/1.1" 200 -
+Received token: KEaz7U4JNSZSB_doODPYzkLvGHfFXsVB1rkTOyFJCisMqAAAAYmxcYlQ
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:12:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:13:25] "OPTIONS /login HTTP/1.1" 200 -
+Received token: FeSWcFKuUSlOu76_PpVnfAViUYsiX71nydbRg4DICiolUQAAAYmxck5z
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:13:25] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:15:58] "OPTIONS /login HTTP/1.1" 200 -
+Received token: iYSaLqs9jjloiKKQwfrSNOaR21gvgP5tnmUWwRICCisMpwAAAYmxdKGz
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:15:58] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:16:10] "OPTIONS /login HTTP/1.1" 200 -
+Received token: hpx_M_FjkvGWWJ8RxLORfpq_a6PcqPwcVRlApegRCisMpwAAAYmxdNDo
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:16:10] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:22:30] "OPTIONS /login HTTP/1.1" 200 -
+Received token: 7ph8bHUHsVAzIkNlKurZmFkGvuEOkuiaIVHTRBO1Cj1zmwAAAYmxep2y
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+ERROR:login2:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ny/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/ny/Documents/GitHub/Azure-Project/Mueller-backend/login2.py", line 61, in login
+    name = kakao_user["kakao_account"]["profile"]["nickname"]
+KeyError: 'nickname'
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:22:30] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7700
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:30:01] "OPTIONS /login HTTP/1.1" 200 -
+Received token: iJ2-anphkKjROKi5xA11nc92186KEMD1ONDbn9zhCj11WwAAAYmxgYC-
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+INFO:werkzeug:127.0.0.1 - - [01/Aug/2023 23:30:01] "POST /login HTTP/1.1" 200 -
