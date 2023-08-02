@@ -1605,3 +1605,8 @@ Received token: mILpbbHsSMHD3RGJmflFB1a-8ijAoxI8ifoSmPG7CisNHwAAAYm2pVve
 User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
 Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
 INFO:werkzeug:127.0.0.1 - - [02/Aug/2023 23:27:17] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 00:50:48] "OPTIONS /login HTTP/1.1" 200 -
+Received token: a8WMAywh5VM9AfOkG5nKk7kFUB2duGAnkDUevEtaCiolUAAAAYm28dJA
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 00:50:48] "POST /login HTTP/1.1" 200 -
