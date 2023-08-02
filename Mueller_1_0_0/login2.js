@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // 로그인 성공 시, 백엔드에 토큰을 전송합니다.
           console.log("Login successful");
           console.log(authObj);
-          fetch("http://localhost:7700/login", {
+          fetch("http://localhost:8800/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

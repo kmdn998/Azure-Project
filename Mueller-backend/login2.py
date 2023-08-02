@@ -71,6 +71,8 @@ def login():
         algorithm="HS256",
     )
 
+    print(f"Generated JWT Token: {token}")
+
     return jsonify({"message": message, "token": token})
 
 
@@ -79,4 +81,4 @@ logging.basicConfig(level=logging.INFO)
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-    app.run(port=7700)
+    app.run(port=8800)
