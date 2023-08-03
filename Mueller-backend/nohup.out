@@ -1610,3 +1610,46 @@ Received token: a8WMAywh5VM9AfOkG5nKk7kFUB2duGAnkDUevEtaCiolUAAAAYm28dJA
 User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
 Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
 INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 00:50:48] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 8800 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+Address already in use
+Port 7700 is in use by another program. Either identify and stop that program, or start the server with a different port.
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:2200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:17:31] "OPTIONS /login HTTP/1.1" 200 -
+Received token: NO4gtTMZlaAuQQ0F7V1LaJBrXEvlg3dPodsRvE8lCinJYAAAAYm7i9f9
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:17:31] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:2200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:33:56] "OPTIONS /login HTTP/1.1" 200 -
+Received token: WMqUyA3C_73SgUJsB74fKYGu8bDW_FIodqCdhAS5CinI2AAAAYm7muDZ
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:33:56] "POST /login HTTP/1.1" 200 -
+ * Serving Flask app 'login2'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:2200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:39:08] "OPTIONS /login HTTP/1.1" 200 -
+Received token: NWMNSsEO4riPBLbRyJKk5BbswR40vO-rRuTB20GwCiolUwAAAYm7n6H0
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:39:08] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:40:43] "OPTIONS /login HTTP/1.1" 200 -
+Received token: lNzvsLnhIcj3Opkze9VdvKG-tSjWn_f71PRcfM-HCj1zFwAAAYm7oRW5
+User Info: {'id': 2917223080, 'connected_at': '2023-07-18T05:40:17Z', 'properties': {'nickname': '김나영'}, 'kakao_account': {'profile_nickname_needs_agreement': False, 'profile': {'nickname': '김나영'}, 'has_email': True, 'email_needs_agreement': False, 'is_email_valid': True, 'is_email_verified': True, 'email': 'kny200208@kakao.com', 'has_gender': True, 'gender_needs_agreement': False, 'gender': 'female'}}
+Generated JWT Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtueTIwMDIwOEBrYWthby5jb20iLCJnZW5kZXIiOiJmZW1hbGUiLCJuYW1lIjoiXHVhZTQwXHViMDk4XHVjNjAxIn0.OOHonxU9iMQEX-nA4EHrtI-CTIOTWWlYGDv3jwMx5-c
+INFO:werkzeug:127.0.0.1 - - [03/Aug/2023 22:40:43] "POST /login HTTP/1.1" 200 -

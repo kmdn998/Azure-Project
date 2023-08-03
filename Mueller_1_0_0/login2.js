@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // 로그인 성공 시, 백엔드에 토큰을 전송합니다.
           console.log("Login successful");
           console.log(authObj);
-          fetch("http://localhost:8800/login", {
+          fetch("http://localhost:2200/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
               } else {
                 alert("알 수 없는 오류가 발생했습니다.");
               }
+
+              localStorage.setItem("jwt", data.token);
 
               // 로그인 성공 시 index.html로 이동
               window.location.href = "index.html";
